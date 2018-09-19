@@ -80,7 +80,7 @@ public:
     IRCClient() : _debug(false) {};
 
     bool InitSocket();
-    bool Connect(char* /*host*/, int /*port*/);
+    bool Connect(const char* /*host*/, int /*port*/);
     void Disconnect();
     bool Connected() { return _socket.Connected(); };
 

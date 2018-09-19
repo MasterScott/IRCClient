@@ -37,7 +37,7 @@ bool IRCClient::InitSocket()
     return _socket.Init();
 }
 
-bool IRCClient::Connect(char* host, int port)
+bool IRCClient::Connect(const char* host, int port)
 {
     return _socket.Connect(host, port);
 }
