@@ -18,6 +18,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <unistd.h>
 
 #ifdef _WIN32
 #include <winsock2.h>
@@ -27,8 +28,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
-#define closesocket(s) close(s)
-#define close(s)
+#define closesocket(s) shutdown(s,2); close(s)
 #define SOCKET_ERROR -1
 #define INVALID_SOCKET -1
 #endif
